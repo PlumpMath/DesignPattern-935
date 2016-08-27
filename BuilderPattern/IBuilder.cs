@@ -8,9 +8,6 @@ namespace BuilderPattern
 {
     interface IBuilder
     {
-        void chooseCPU();
-        void chooseGPU();
-        void chooseMemory();
-        Computer getProduct();
+        Computer getComputer();
     }
 }

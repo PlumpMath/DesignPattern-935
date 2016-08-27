@@ -17,10 +17,7 @@ namespace BuilderPattern
         public Computer construct()
         {
             Console.WriteLine("director is building-------");
-            m_builder.chooseCPU();
-            m_builder.chooseGPU();
-            m_builder.chooseMemory();
-            return m_builder.getProduct();
+            return m_builder.getComputer();
         }
     }
 }

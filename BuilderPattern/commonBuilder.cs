@@ -10,23 +10,20 @@ namespace BuilderPattern
     {
         private Computer m_computer = new Computer();
 
-        public void chooseCPU()
+        public void addCheapCPU()
         {
             m_computer.add("CPU-Core-m");
         }
 
-        public void chooseGPU()
-        {
-            m_computer.add("GPU-Intel3000");
-        }
-
-        public void chooseMemory()
+        public void addMemory()
         {
             m_computer.add("Memory-4GB");
         }
 
-        public Computer getProduct()
+        public Computer getComputer()
         {
+            addCheapCPU();
+            addMemory();
             return m_computer;
         }
     }
