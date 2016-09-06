@@ -24,16 +24,13 @@ namespace Composite
             childs.Remove(child);
         }
 
-        public override void Draw()
+        public override void Draw(int depth)
         {
-            Console.WriteLine("I am a {0}.", name);
-            Console.WriteLine("---------------------The following is my composites-----------------------");
+            Console.WriteLine(new String('-',depth) + name);
             foreach (var child in childs)
             {
-                child.Draw();
-                Console.WriteLine("-----------------------");
+                child.Draw(depth + 4);
             }
-            Console.WriteLine("Done.");
         }
 
 

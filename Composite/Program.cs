@@ -12,20 +12,15 @@ namespace Composite
         {
             var ele1 = new ComplexElement();
 
-            var ele2 = new Line();
-            var ele3 = new Circle();
+            var ele2 = new ComplexElement();
+            ele2.Add(new Line());
+            ele2.Add(new Circle());
 
-            var ele4 = new ComplexElement();
-            var ele5 = new Line();
-            var ele6 = new Circle();
-            ele4.Add(ele5);
-            ele4.Add(ele6);
-
-            ele1.Add(ele4);
+            ele1.Add(new Line());
             ele1.Add(ele2);
-            ele1.Add(ele3);
+            ele1.Add(new Circle());
 
-            ele1.Draw();
+            ele1.Draw(0);
             Console.ReadKey();
         }
     }

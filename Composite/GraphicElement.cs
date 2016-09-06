@@ -19,6 +19,6 @@ namespace Composite
             name = "Anonymous Graphic Element";
         }
 
-        public abstract void Draw();
+        public abstract void Draw(int depth);
     }
 }

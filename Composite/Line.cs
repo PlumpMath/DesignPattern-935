@@ -13,9 +13,9 @@ namespace Composite
             name = "Line";
         }
 
-        public override void Draw()
+        public override void Draw(int depth)
         {
-            Console.WriteLine("I am a {0}.", name);
+            Console.WriteLine(new string('-', depth) + name);
         }
     }
 }
